@@ -1,2 +1,2 @@
 # oop-hris
-2024-1 oop mini project
+2024-1 oop mini projectd
