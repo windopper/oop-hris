@@ -50,4 +50,4 @@ git push origin <브랜치 이름>
 - [김동연](https://github.com/dave04182)
 - [박세준](https://github.com/PSJ1564)
 - 최경민
-- 차민찬
+- [차민찬](https://github.com/DenBen01)
