@@ -49,5 +49,5 @@ git push origin <브랜치 이름>
 - [권영훈](https://github.com/windopper)
 - [김동연](https://github.com/dave04182)
 - [박세준](https://github.com/PSJ1564)
-- 최경민
+- [최경민](https://github.com/daedalus-KM)
 - [차민찬](https://github.com/DenBen01)
