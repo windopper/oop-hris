@@ -43,3 +43,11 @@ git push origin <브랜치 이름>
    - 저장소의 깃허브 페이지로 이동합니다.
    - `Compare & pull request` 버튼을 클릭합니다
    - 변경 사항에 대한 설명을 작성하고 `Create pull request` 버튼을 클릭합니다
+
+## 멤버
+
+- [권영훈](https://github.com/windopper)
+- [김동연](https://github.com/dave04182)
+- [박세준](https://github.com/PSJ1564)
+- 최경민
+- 김동연 
