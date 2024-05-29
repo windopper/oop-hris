@@ -14,12 +14,18 @@ import lombok.Setter;
 public class Employee {
     @NonNull
     private String name;
+    // 직원 개인 식별 번호
+    private int codeNumber;    
     private String phoneNumber;
     private String address;
     private String email;
     private int salary;
     private String department;
     private String career;
+    // 입사 연도
+    private int yearOfEmployment;
+    // 결혼 여부
+    private boolean marriage;
     // 출신 학교
     private String school;
     // 병역 여부
