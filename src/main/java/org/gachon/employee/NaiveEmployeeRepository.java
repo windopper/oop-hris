@@ -84,4 +84,9 @@ public class NaiveEmployeeRepository implements EmployeeRepository {
         return employees.stream().filter(e -> e.getSalary() == salary).toList();
     }
 
+    @Overried
+    public List<Employee> findByCertificate(String certificate) {
+        return employees.stream().filter(e -> e.getCertificate().equals(certificate)).toList();
+    }
+
 }
