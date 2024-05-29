@@ -1,5 +1,9 @@
 package org.gachon;
 
+import org.gachon.employee.Employee;
+import org.gachon.employee.EmployeeRepository;
+import org.gachon.employee.NaiveEmployeeRepository;
+
 public class Main {
     public static void main(String[] args) {
         // 예시 직원 생성
@@ -18,9 +22,8 @@ public class Main {
                 .build();
         // EmployeeRepository 인스턴스 생성
         EmployeeRepository repository = new NaiveEmployeeRepository();
+
         // 직원 저장
-        repository.save(employee1);
-        
-     
+        repository.save(employee);
     }
 }
