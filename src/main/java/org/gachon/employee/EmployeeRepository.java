@@ -32,4 +32,6 @@ public interface EmployeeRepository {
     public List<Employee> findByCareer(String career);
 
     public List<Employee> findBySalary(int salary);
+
+    public List<Employee> findByCertificate(String certificate);
 }
