@@ -11,11 +11,17 @@ public interface EmployeeRepository {
 
     public List<Employee> findByName(String name);
 
+    public List<Employee> findByCodeNumber(int codeNumber);
+
     public List<Employee> findByPhoneNumber(String phoneNumber);
 
     public List<Employee> findByEmail(String email);
 
     public List<Employee> findByDepartment(String department);
+
+    public List<Employee> findByYearOfEmployment(int yearOfEmployment);
+
+    public List<Employee> findByMarriage(boolean marriage);
 
     public List<Employee> findBySchool(String school);
 
@@ -26,4 +32,6 @@ public interface EmployeeRepository {
     public List<Employee> findByCareer(String career);
 
     public List<Employee> findBySalary(int salary);
+
+    public List<Employee> findByCertificate(String certificate);
 }
