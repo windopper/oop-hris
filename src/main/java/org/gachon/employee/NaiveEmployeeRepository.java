@@ -31,7 +31,7 @@ public class NaiveEmployeeRepository implements EmployeeRepository {
 
     @Override
     public List<Employee> findByCodeNumber(int codeNumber) {
-        return employees.stream().filter(e -> e.getCodeNumber().equals(codeNumber)).toList();
+        return employees.stream().filter(e -> e.getCodeNumber() == codeNumber).toList();
     }
 
     @Override
@@ -51,12 +51,12 @@ public class NaiveEmployeeRepository implements EmployeeRepository {
 
     @Override
     public List<Employee> findByYearOfEmployment(int yearOfEmployment) {
-        return employees.stream().filter(e -> e.getYearOfEmployment().equals(yearOfEmployment)).toList();
+        return employees.stream().filter(e -> e.getYearOfEmployment() == yearOfEmployment).toList();
     }
 
     @Override
     public List<Employee> findByMarriage(boolean marriage) {
-        return employees.stream().filter(e -> e.getMarriage().equals(marriage)).toList();
+        return employees.stream().filter(e -> e.isMarriage() == marriage).toList();
     }
 
     @Override
@@ -64,16 +64,16 @@ public class NaiveEmployeeRepository implements EmployeeRepository {
         return employees.stream().filter(e -> e.getSchool().equals(school)).toList();
     }
 
-        @Override
+    @Override
     public List<Employee> findByMilitaryService(boolean militaryService) {
         return employees.stream().filter(e -> e.isMilitaryService() == militaryService).toList();
     }
 
-        @Override
+    @Override
     public List<Employee> findByRewardPunishment(String rewardPunishment) {
         return employees.stream().filter(e -> e.getRewardPunishment().equals(rewardPunishment)).toList();
     }
-    
+
     @Override
     public List<Employee> findByCareer(String career) {
         return employees.stream().filter(e -> e.getCareer().equals(career)).toList();
@@ -84,7 +84,7 @@ public class NaiveEmployeeRepository implements EmployeeRepository {
         return employees.stream().filter(e -> e.getSalary() == salary).toList();
     }
 
-    @Overried
+    @Override
     public List<Employee> findByCertificate(String certificate) {
         return employees.stream().filter(e -> e.getCertificate().equals(certificate)).toList();
     }

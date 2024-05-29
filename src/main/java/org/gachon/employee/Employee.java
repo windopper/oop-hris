@@ -15,7 +15,7 @@ public class Employee {
     @NonNull
     private String name;
     // 직원 개인 식별 번호
-    private int codeNumber;    
+    private int codeNumber;
     private String phoneNumber;
     private String address;
     private String email;
