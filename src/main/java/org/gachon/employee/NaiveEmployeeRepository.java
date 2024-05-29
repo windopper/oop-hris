@@ -25,28 +25,13 @@ public class NaiveEmployeeRepository implements EmployeeRepository {
     }
 
     @Override
-    public List<Employee> findByCareer(String career) {
-        return employees.stream().filter(e -> e.getCareer().equals(career)).toList();
-    }
-
-    @Override
-    public List<Employee> findByDepartment(String department) {
-        return employees.stream().filter(e -> e.getDepartment().equals(department)).toList();
-    }
-
-    @Override
-    public List<Employee> findByEmail(String email) {
-        return employees.stream().filter(e -> e.getEmail().equals(email)).toList();
-    }
-
-    @Override
-    public List<Employee> findByMilitaryService(boolean militaryService) {
-        return employees.stream().filter(e -> e.isMilitaryService() == militaryService).toList();
-    }
-
-    @Override
     public List<Employee> findByName(String name) {
         return employees.stream().filter(e -> e.getName().equals(name)).toList();
+    }
+
+    @Override
+    public List<Employee> findByCodeNumber(int codeNumber) {
+        return employees.stream().filter(e -> e.getCodeNumber().equals(codeNumber)).toList();
     }
 
     @Override
@@ -55,8 +40,43 @@ public class NaiveEmployeeRepository implements EmployeeRepository {
     }
 
     @Override
+    public List<Employee> findByEmail(String email) {
+        return employees.stream().filter(e -> e.getEmail().equals(email)).toList();
+    }
+
+    @Override
+    public List<Employee> findByDepartment(String department) {
+        return employees.stream().filter(e -> e.getDepartment().equals(department)).toList();
+    }
+
+    @Override
+    public List<Employee> findByYearOfEmployment(int yearOfEmployment) {
+        return employees.stream().filter(e -> e.getYearOfEmployment().equals(yearOfEmployment)).toList();
+    }
+
+    @Override
+    public List<Employee> findByMarriage(boolean marriage) {
+        return employees.stream().filter(e -> e.getMarriage().equals(marriage)).toList();
+    }
+
+    @Override
+    public List<Employee> findBySchool(String school) {
+        return employees.stream().filter(e -> e.getSchool().equals(school)).toList();
+    }
+
+        @Override
+    public List<Employee> findByMilitaryService(boolean militaryService) {
+        return employees.stream().filter(e -> e.isMilitaryService() == militaryService).toList();
+    }
+
+        @Override
     public List<Employee> findByRewardPunishment(String rewardPunishment) {
         return employees.stream().filter(e -> e.getRewardPunishment().equals(rewardPunishment)).toList();
+    }
+    
+    @Override
+    public List<Employee> findByCareer(String career) {
+        return employees.stream().filter(e -> e.getCareer().equals(career)).toList();
     }
 
     @Override
@@ -64,8 +84,4 @@ public class NaiveEmployeeRepository implements EmployeeRepository {
         return employees.stream().filter(e -> e.getSalary() == salary).toList();
     }
 
-    @Override
-    public List<Employee> findBySchool(String school) {
-        return employees.stream().filter(e -> e.getSchool().equals(school)).toList();
-    }
 }
