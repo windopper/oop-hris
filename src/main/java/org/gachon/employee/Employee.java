@@ -32,9 +32,10 @@ public class Employee {
     private boolean militaryService;
     // 상벌 현황
     private String rewardPunishment;
-    //초과근무시간(분)
+    // 초과근무시간(분)
     private int overWorkmin;
-    //연차
+    // 연차
     private int vacation;
-    
+    // 자격증
+    private String certificate;
 }
