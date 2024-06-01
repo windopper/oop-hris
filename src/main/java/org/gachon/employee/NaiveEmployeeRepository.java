@@ -5,6 +5,17 @@ import java.util.List;
 
 public class NaiveEmployeeRepository implements EmployeeRepository {
     private List<Employee> employees = new ArrayList<>();
+    private static EmployeeRepository instance;
+
+    private NaiveEmployeeRepository() {
+    }
+
+    public static EmployeeRepository getInstance() {
+        if (instance == null) {
+            instance = new NaiveEmployeeRepository();
+        }
+        return instance;
+    }
 
     @Override
     public void save(Employee employee) {
@@ -80,8 +91,8 @@ public class NaiveEmployeeRepository implements EmployeeRepository {
     }
 
     @Override
-    public List<Employee> findBySalary(int salary) {
-        return employees.stream().filter(e -> e.getSalary() == salary).toList();
+    public List<Employee> findByHourlyRate(int hourlyRate) {
+        return employees.stream().filter(e -> e.getHourlyRate() == hourlyRate).toList();
     }
 
     @Override
