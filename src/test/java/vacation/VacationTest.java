@@ -25,7 +25,7 @@ public class VacationTest {
                 .name("Kim gachon")
                 .phoneNumber("000-0000-0000")
                 .email("gc@gachon.ac.kr")
-                .salary(3000)
+                .hourlyRate(15000)
                 .department("Dev1")
                 .career("None")
                 .school("Gachon University")
