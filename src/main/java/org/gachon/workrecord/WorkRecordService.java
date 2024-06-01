@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import org.gachon.employee.Employee;
 
 public class WorkRecordService {
-    private WorkRecordRepository workRecordRepository = new NaiveWorkRecordRepository();
+    private WorkRecordRepository workRecordRepository = NaiveWorkRecordRepository.getInstance();
     private static WorkRecordService instance;
 
     private WorkRecordService() {

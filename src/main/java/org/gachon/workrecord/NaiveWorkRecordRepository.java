@@ -8,6 +8,17 @@ import org.gachon.employee.Employee;
 
 public class NaiveWorkRecordRepository implements WorkRecordRepository {
     private List<WorkRecord> workRecords = new ArrayList<>();
+    private static NaiveWorkRecordRepository instance;
+
+    private NaiveWorkRecordRepository() {
+    }
+
+    public static NaiveWorkRecordRepository getInstance() {
+        if (instance == null) {
+            instance = new NaiveWorkRecordRepository();
+        }
+        return instance;
+    }
 
     @Override
     public void save(WorkRecord workRecord) {
@@ -40,8 +51,11 @@ public class NaiveWorkRecordRepository implements WorkRecordRepository {
     @Override
     public List<WorkRecord> findByEmployeeAndBetweenDate(Employee employee, LocalDateTime startDate,
             LocalDateTime endDate) {
-        return workRecords.stream().filter(w -> w.getEmployee().equals(employee))
-                .filter(w -> w.getDate().isAfter(startDate) && w.getDate().isBefore(endDate)).toList();
+        return workRecords.stream()
+                .filter(w -> w.getEmployee().equals(employee))
+                .filter(w -> w.getDate().isEqual(startDate)
+                        || (w.getDate().isAfter(startDate) && w.getDate().isBefore(endDate)))
+                .toList();
     }
 
 }

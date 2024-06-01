@@ -9,7 +9,7 @@ import org.gachon.employee.Employee;
  * 휴가 관리 클래스
  */
 public class VacationService {
-    private VacationRepository vacationRepository = new NaiveVacationRepository();
+    private VacationRepository vacationRepository = NaiveVacationRepository.getInstance();
     private static VacationService instance;
 
     private VacationService() {
