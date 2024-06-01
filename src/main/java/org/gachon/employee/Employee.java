@@ -20,7 +20,7 @@ public class Employee {
     private String phoneNumber;
     private String address;
     private String email;
-    private int salary;
+    private int hourlyRate;
     private String department;
     private String career;
     // 입사 연도

@@ -7,6 +7,17 @@ import org.gachon.employee.Employee;
 
 public class NaiveVacationRepository implements VacationRepository {
     private List<Vacation> vacations = new ArrayList<>();
+    private static VacationRepository instance;
+
+    private NaiveVacationRepository() {
+    }
+
+    public static VacationRepository getInstance() {
+        if (instance == null) {
+            instance = new NaiveVacationRepository();
+        }
+        return instance;
+    }
 
     @Override
     public void save(Vacation vacation) {
